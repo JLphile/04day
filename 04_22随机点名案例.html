@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // //随机点名 但是不允许重复抽取
+      // let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+      // let randomInt = Math.floor(Math.random() * arr.length)
+      // document.write(arr[randomInt])
+      // //删除选中的元素
+      // arr.splice(randomInt, 1)
+
+      //随机排序(洗牌)
+      // let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+      // let newArr = []
+      // while (arr.length > 0) {
+      //   let randomInt = Math.floor(Math.random() * arr.length)
+      //   newArr.push(arr[randomInt])
+      //   //删除选中的元素
+      //   arr.splice(randomInt, 1)
+      // }
+      // document.write(newArr)
+
+      let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+      //封装函数
+      function randomShuffle(params) {
+        let newArr = []
+        while (params.length > 0) {
+          let randomInt = Math.floor(Math.random() * params.length)
+          newArr.push(params[randomInt])
+          //删除选中的元素
+          arr.splice(randomInt, 1)
+        }
+        console.log(newArr);
+        return document.write(newArr)
+      }
+      randomShuffle(arr)
+    </script>
+  </body>
+</html>

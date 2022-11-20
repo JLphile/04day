@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(Math.PI)
+      //向上取整
+      console.log(Math.ceil(1.9)) //2
+      console.log(Math.ceil(-1.9)) //-1
+      //向下取整
+      console.log(Math.floor(1.9)) //1
+      console.log(Math.floor(-1.9)) //-2
+      // 舍去小数点后的数据
+      console.log(parseInt(1.9)) //1
+      console.log(parseInt(-1.9)) // -1
+      //parseInt()可以处理字符串
+      console.log(parseInt('-1.9px')) // -1
+
+      //四舍五入-取更近的整数，如果一般近就取更大的
+      console.log(Math.round(20.49)) //20
+      console.log(Math.round(20.5)) //21
+      console.log(Math.round(-20.5)) //-20
+      console.log(Math.round(-20.51)) //-21
+      //最值
+      console.log(Math.max(1, 2, 3, 4, 5)) //5
+      console.log(Math.min(1, 2, 3, 4, 5)) //1
+      //绝对值
+      console.log(Math.abs(-1.9)) //1.9
+      
+    </script>
+  </body>
+</html>
