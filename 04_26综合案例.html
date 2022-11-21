@@ -11,8 +11,11 @@
       margin: 0;
       padding: 0;
     }
-    ul li{
+    ul li {
       list-style: none;
+    }
+    a{
+      text-decoration: none;
     }
     .box-w {
       max-width: 1225px;
@@ -24,9 +27,22 @@
       justify-content: space-between;
       padding: 20px 0;
     }
-
     .box-hd > a {
       display: inline-block;
+    }
+    .box-bd ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .box-bd ul li {
+      padding: 4px;
+      display: inline-block;
+    }
+    .box-bd ul li h4 {
+      padding: 10px;
+    }
+    .bds {
+      padding: 10px;
     }
   </style>
   <body>
@@ -36,14 +52,79 @@
         <a href="#">查看全部</a>
       </div>
       <div class="box-bd">
-        <ul>
-          <li>
+        <ul class="clearfix">
+          <!-- <li>
             <a href="#">
               <img src="images/course01.jpg" alt="" />
               <h4>data</h4>
-              <div><span>高级</span>·<span>data</span>人在学习</div>
+              <div class="bds"><span>高级</span>·<span>data</span>人在学习</div>
             </a>
-          </li>
+          </li> -->
+          <script>
+            let data = [
+              {
+                src: 'images/course01.jpg',
+                title: 'Think PHP 博客系统实战演练',
+                num: 1123,
+              },
+              {
+                src: 'images/course02.jpg',
+                title: 'Android 实战演练项目',
+                num: 1123,
+              },
+              {
+                src: 'images/course03.jpg',
+                title: 'Angular2 大前端商城实战项目演练',
+                num: 123,
+              },
+              {
+                src: 'images/course04.jpg',
+                title: 'Android APP',
+                num: 389,
+              },
+              {
+                src: 'images/course05.jpg',
+                title: 'UGUI 源码深度分析案例',
+                num: 2536,
+              },
+              {
+                src: 'images/course06.jpg',
+                title: 'Kami2 首页界面切换效果实战演练',
+                num: 361,
+              },
+              {
+                src: 'images/course07.jpg',
+                title: 'UNITY 从入门到精通实战案例',
+                num: 2254,
+              },
+              {
+                src: 'images/course07.jpg',
+                title: 'UNITY 从入门到精通实战案例',
+                num: 2254,
+              },
+              {
+                src: 'images/course07.jpg',
+                title: 'UNITY 从入门到精通实战案例',
+                num: 2254,
+              },
+              {
+                src: 'images/course07.jpg',
+                title: 'UNITY 从入门到精通实战案例',
+                num: 2254,
+              },
+            ]
+            for (let i = 0; i < data.length; i++) {
+              document.write(`
+              <li>
+                  <a href="#">
+                    <img src=${data[i].src} title="${data[i].title}" />
+                    <h4>${data[i].title}</h4>
+                    <div class="bds"><span>高级</span>·<span>${data[i].num}</span>人在学习</div>
+                  </a>
+                </li>
+              `)
+            }
+          </script>
         </ul>
       </div>
     </div>
